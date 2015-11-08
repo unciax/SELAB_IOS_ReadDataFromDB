@@ -9,15 +9,18 @@
 import Foundation
 
 class APIConfig{
-    //let apiBaseUrl = "http://ccejewerly.azurewebsites.net/API/"
-    let apiBaseUrl = "http://ccejewerly.azurewebsites.net/"
+    let apiBaseUrl = "http://mlf.twbbs.org/nkfust/ccejewelry/API/"
+    let jewelryBasePath = "Jewelry/"
+    let speciesBasePath = "Species/"
+    //var login:String!           // login
     var listSpecies:String!     // Get list of species
     var listJewelry:String!     // Get list of jewelry
     var getJewelryImage:String! // Get image of jewelry
     
     init(){
-        listSpecies = apiBaseUrl + "species/list.aspx"
-        listJewelry = apiBaseUrl + "query.aspx" //"jewelry/list.aspx"
-        getJewelryImage = apiBaseUrl + "jewelry/getImage.ashx?id="
+        //login = apiBaseUrl + "login.php"
+        listSpecies = apiBaseUrl + speciesBasePath +  "list.php"
+        listJewelry = apiBaseUrl + jewelryBasePath +  "list.php"
+        getJewelryImage = apiBaseUrl + jewelryBasePath + "getImage.php?jewID="
     }
 }
